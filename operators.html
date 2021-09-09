@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Calculator by Parth</title>
+<center>
+<h3>
+This is a 21 digit Calculator!
+</h3>
+</center>
+<script>
+function calc(){
+var n1=parseFloat(document.getElementById('n1').value);
+var n2=parseFloat(document.getElementById('n2').value);
+var abc=document.getElementById('a1').value;
+if(abc=='+')
+{var n2=document.getElementById('result').value=n1+n2;}
+if(abc=='-')
+{var n2=document.getElementById('result').value=n1-n2;}
+if(abc=='÷')
+{var n2=document.getElementById('result').value=n1/n2;}
+if(abc=='×')
+{var n2=document.getElementById('result').value=n1*n2;}
+if(abc=='^')
+{var n2=document.getElementById('result').value=Math.pow(n1,n2);}
+if(abc=='²')
+{var n1=document.getElementById('result').value=Math.pow(n1,2);}
+if(abc=='a')
+{var n1=document.getElementById('result').value=Math.pow(n1,3);}
+if(abc=='b')
+{var n1=document.getElementById('result').value=Math.sqrt(n1);}
+if(abc=='c')
+{var n1=document.getElementById('result').value=Math.cbrt(n1);}}
+</script>
+</head>
+<body>
+<p style="font-size:25px;font-variant:small-caps;"><strong>note: first box should contain the first number for dual number functions & the only number for single numbered functions.</strong></p>
+<input type="text" id="n1" style="font-size:25px;"><br/><br/>
+<input type="text" id="n2" style="font-size:25px;"><br/><br/>
+<select id="a1" style="font-size:25px;">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="÷">÷</option>
+<option value="×">×</option>
+<option value="^">a^b</option>
+<option value="²">a²</option>
+<option value="a">a&sup3;</option>
+<option value="b">&#8730;a</option>
+<option value="c">&#8731;a</option>
+</select><br/><br/>
+<button onclick="calc()" style="font-size:25px;">=</button><br><br>
+<input type="text" id="result" style="font-size:25px;"></body>
+</html>
